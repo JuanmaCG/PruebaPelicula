@@ -1,0 +1,18 @@
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <td>Director</td>
+                    <td>Titulo</td>
+                    <td>Fecha</td>
+                </tr>
+            </thead>
+            <tbody *ngFor="let pelicula of listadoPeliculas">
+                <td>{{pelicula.director}}</td>
+                <td>{{pelicula.titulo}}</td>
+                <td>{{pelicula.fecha}}</td>
+            </tbody>
+        </table>
+    </div>
+</div>
