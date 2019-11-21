@@ -1,0 +1,11 @@
+<div class="form-class col-6">
+    <form (ngSubmit)="validarLogin()">
+        <div class="form-group">
+            <label for="dni">Usuario</label>
+            <input type="text" name="name" [(ngModel)]="usuario" class="form-control">
+            <label>Contraseña</label>
+            <input type="password" name="name" [(ngModel)]="password" class="form-control">
+            <button type="submit" class="btn btn-success mt-2">Consultar</button>
+        </div>
+    </form>
+</div>

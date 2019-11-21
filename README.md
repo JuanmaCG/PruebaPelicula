@@ -5,6 +5,11 @@ fecha datetime);
 
 insert into pelicula values('juanma', 'el suspenso', '1995-01-29');
 
+create table Login(
+usuario varchar(255) primary key,
+password varchar(255));
+insert into Usuarios values('juanma', 'juanma');
+
 Base de datos : Mysql;
 Spring Boot;
 Angular;

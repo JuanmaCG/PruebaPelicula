@@ -6,13 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
-import { IndexComponent } from './index/index.component';
+import { ConsultaDirectorComponent } from './consultaDirector/consultaDirector.component';
+import { InfoComponent } from './info/info.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
-    IndexComponent
+    ConsultaDirectorComponent,
+    InfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
