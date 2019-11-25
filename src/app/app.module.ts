@@ -9,6 +9,10 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { ConsultaDirectorComponent } from './consultaDirector/consultaDirector.component';
 import { InfoComponent } from './info/info.component';
 import { LoginComponent } from './login/login.component';
+import { MantenimientoComponent } from './mantenimiento/mantenimiento.component';
+import { UpdatePeliculaComponent } from './update-pelicula/update-pelicula.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { RegistrarAdministradorComponent } from './registrar-administrador/registrar-administrador.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { LoginComponent } from './login/login.component';
     PeliculasComponent,
     ConsultaDirectorComponent,
     InfoComponent,
-    LoginComponent
+    LoginComponent,
+    MantenimientoComponent,
+    UpdatePeliculaComponent,
+    CreateMovieComponent,
+    RegistrarAdministradorComponent
   ],
   imports: [
     BrowserModule,

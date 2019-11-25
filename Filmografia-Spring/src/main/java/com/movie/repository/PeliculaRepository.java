@@ -14,4 +14,7 @@ public interface PeliculaRepository extends JpaRepository<Pelicula, String>{
 	@Query("SELECT * FROM Pelicula p WHERE p.director = ?1")
 	List<Pelicula> findByDirector(String director);
 	
+	@Query("SELECT * FROM Pelicula p WHERE p.titulo = ?1")
+	Pelicula findByTitulo(String titulo);
+	
 }

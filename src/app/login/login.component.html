@@ -12,4 +12,13 @@
 
 <div *ngIf="usuarioValidado()">
     <h3>Estas logeado</h3>
+    <p class="text-success">Bienvenido, usuario: {{usuarioBBDD.usuario}} password: {{usuarioBBDD.password}}</p>
+
+
+    <button (click)="toMantenimiento()" class="btn btn-warning">Mantenimiento Peliculas</button>
+    <button (click)="toIndex()" class="btn btn-primary ml-3">Volver</button>
+</div>
+
+<div *ngIf="!usuarioValidado()">
+    <p class="text-danger">Usuario / Contraseña incorrecto</p>
 </div>

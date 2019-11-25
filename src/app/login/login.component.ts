@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Usuario } from '../usuario';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,35 +14,40 @@ export class LoginComponent implements OnInit {
   usuario: string;
   password: string;
   usuarioLogeado: Usuario;
-  loginCorrecto: Boolean;
+  loginCorrecto: boolean;
 
   usuarioBBDD: Usuario;
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
-  async validarLogin(){
+  async validarLogin() {
     this.loginCorrecto = false;
     this.usuarioLogeado.usuario = this.usuario;
     this.usuarioLogeado.password = this.password;
-    await this.loginService.getUsuario(this.usuario).toPromise().then((data) => this.usuarioBBDD = data) 
-    
+    await this.loginService.getUsuario(this.usuario).toPromise().then((data) => this.usuarioBBDD = data)
 
-    if(this.usuarioBBDD.usuario == this.usuarioLogeado.usuario && this.usuarioBBDD.password == this.usuarioLogeado.password){
+    if (this.usuarioBBDD.usuario === this.usuarioLogeado.usuario && this.usuarioBBDD.password === this.usuarioLogeado.password){
       this.loginCorrecto = true;
-    }else{
+    } else {
       this.loginCorrecto = false;
     }
   }
 
-  usuarioValidado(): Boolean{
+  usuarioValidado(): boolean {
     return this.loginCorrecto;
   }
-  
-  
+
   ngOnInit() {
     this.usuarioLogeado = new Usuario();
     this.usuarioBBDD = new Usuario();
   }
 
- 
+  toIndex() {
+    this.router.navigate(['']);
+  }
+
+  toMantenimiento() {
+    this.router.navigate(['mantenimiento']);
+  }
+
 }

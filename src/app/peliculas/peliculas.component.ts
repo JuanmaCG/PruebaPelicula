@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent implements OnInit {
-  
+
   listadoPeliculas: Pelicula[] = [];
   registroDirectores: string[] = [];
 

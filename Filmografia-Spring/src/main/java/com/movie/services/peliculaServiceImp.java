@@ -29,6 +29,12 @@ public class peliculaServiceImp implements PeliculaService{
 		
 		return peliculas;
 	}
+	@Override
+	public Pelicula getPeliculaByTitulo(String titulo) {
+		Pelicula pelicula = peliculaRepo.findByTitulo(titulo);
+		
+		return pelicula;
+	}
 
 
 	@Override
@@ -67,6 +73,7 @@ public class peliculaServiceImp implements PeliculaService{
 			throw new ResourceNotFoundException("Pelicula no encontrada");
 		}
 	}
+
 
 
 

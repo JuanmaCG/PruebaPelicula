@@ -14,4 +14,5 @@ public interface PeliculaService {
 	void deletePelicula(String titulo);
 	Pelicula updatePelicula(Pelicula pelicula);
 	List<Pelicula> getPeliculaByDirector(String director);
+	Pelicula getPeliculaByTitulo (String titulo);
 }
